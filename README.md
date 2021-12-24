@@ -6,6 +6,7 @@ Original Design Wireframe is also added.
 
 
 The API used to get weather forecast information : OpenWeather
+
 Firebase Hosting: https://weforecast-87f47.web.app/
 
 
