@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="side.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="connectsns.css">
+    <title>WeForecast</title>
+  </head>
+  <body>
+    <section>
+        <div class="container">
+            <span class="material-icons" onclick="goBack()"> arrow_back_ios</span><p class="section-header">Connect SNS</p>
+            <script>
+                function goBack() {
+                  window.history.back();
+                }
+            </script>
+    
+    
+    <div class="section-header-min"></br></br>Login</div> 
+   <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk?lang=ko"> <img class="kakao-button" src="../icons/kakao_login_medium_narrow.png"> </a>
+
+    <div class="set-kakao"> <h5 class="title">Kakao Notifications</h5>
+        <div id = "box">
+            <label class = "switch">
+             <input type = "checkbox" id="checkbox1" onClick="toggleSett()">
+             <div class = "slider round"></div>
+        </div>
+        <p>Allow users to receive Kakao talk weather messages</p>
+    <div class="addkakao">
+            <b><a href="./kakaoset.html">Kakao notification settings</a></b></br>
+            Customize the functionality of Kakao notifications
+    </div>
+    
+    </div>
+    <div class="set-kakao"> <h5 class="title">Clothing recommendation</h5>
+        <div id = "box">
+            <label class = "switch">
+             <input type = "checkbox">
+             <div class = "slider round"></div>
+        </div>
+        <p>Allows user to receive Kakao Talk 
+        clothing recommendation based on the weather</p>
+       
+    
+ </div>
+   
+    
+    
+   
+    </section>
+       
+    <script src="./connectsns.js"></script>
+  </body>
+</html>

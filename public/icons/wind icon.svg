@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.5" height="12" viewBox="0 0 27.5 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="wind_icon" data-name="wind icon" transform="translate(-13 -639.5)">
+    <line id="Line_5" data-name="Line 5" class="cls-1" x2="20" transform="translate(19.5 645.5)"/>
+    <line id="Line_6" data-name="Line 6" class="cls-1" x2="20" transform="translate(14.5 640.5)"/>
+    <line id="Line_7" data-name="Line 7" class="cls-1" x2="20" transform="translate(14 650.5)"/>
+  </g>
+</svg>

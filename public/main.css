@@ -1,0 +1,307 @@
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#FFFFFF;
+    font-family: 'Roboto', sans-serif; 
+    
+}
+
+.container{
+    display: block;
+    width: 412px;
+    height: 2140px;
+    background: rgb(27,27,27);
+    background: linear-gradient(180deg, rgba(27,27,27,1) 5%, rgba(0,178,255,1) 25%, rgba(0,212,255,1) 100%);  
+    justify-content: center;
+    align-items: center; 
+    padding:0px;
+}
+section {
+    
+    height: 2140px;
+    width: 412px;
+}
+
+h1{
+    font-size: 150px;
+    font-weight: 600;
+    float:left;
+}
+
+.row{
+    position: relative;
+    left:25px;
+    
+}
+.row.menu {
+   
+    left:25px; 
+    width:auto;
+  
+
+}
+ 
+.row.menu label{
+    display: inline-block;
+  text-align: center;
+  margin: 0 0.2em;
+  width: auto;
+
+}
+.row.menu label input[type="radio"] {
+    display: block;
+    margin: 0.5em auto;
+    width: auto;
+  }
+
+  .row.menu input{
+      width: auto;
+      
+  }
+
+  .row.menu .checkGraph {
+    -webkit-appearance: none;
+    margin-left:5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+
+  .row.menu .checkGraph:checked{
+       
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        outline: none;
+        background-color: #50C7EB;
+    
+  }
+
+.col-sm-4{
+    cursor: pointer;
+}
+
+#chart {
+    position:absolute;
+    max-width: 450px;
+    margin-right: 30px;
+  }
+  
+
+header {
+     padding-top: 50px;
+}
+
+#place{
+    
+    font-size:26px;
+    margin-left: 40px;
+}
+
+#weatherDesc {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#date{
+    margin-top:-15px;
+    font-size: 20px;
+    width:190px;
+}
+
+.section-header{
+    margin-bottom: 2px;
+    font-size:26px;
+    font-weight: 700;   
+
+}
+
+.col-md-auto {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.container-fluid{
+   
+    margin-left:15px;
+    margin-bottom: 40px;
+}
+
+#info{
+    height:90px;
+   
+}
+
+#details{
+    background-color: #1F2022;
+    width: 412px;
+    border-radius: 50px 50px 0px 0px;
+   
+}
+
+.material-icons:hover{
+    cursor: pointer;
+}
+
+.element{
+    font-size:18px;
+    margin:0px;
+}
+
+.element-desc{
+    color:#CCCBCB;
+    font-size:18px;
+   
+}
+
+#details-row{
+    width: 412px;
+     left:0px;
+    
+}
+
+.material-icons.dropdown {
+    position: relative;
+    left:300px;
+    bottom: 80px;
+}
+
+.material-icons.dropdown--flipped{
+    transform: scaleY(-1);
+}
+
+.element-icon{
+    width:25px;
+    height:25px;
+   
+ 
+}
+
+.element-icon{
+    width: 25px;
+}
+
+.col-sm-1{
+    margin-top:15px;
+}
+.minimized{
+    display: flex;
+    flex-direction: column;
+    margin-left: 22px;
+}
+.more{
+    display: none;
+}
+
+.more--show
+{
+    display:inline;
+    
+
+}
+
+.week-day{
+    display: block;
+    height: 50px;
+    width: 300px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.perpWeather {
+    float: left;
+    width: 30%;
+}
+.mixMan{
+  float: right;
+  width: 40%;
+}
+   .sidemenu{
+    position: fixed;
+    top: 0px;
+    left: 500px;
+    height: 100%;
+    width: 0px;
+    background-color: #222;
+    z-index: 1;
+    padding-top: 100px;
+    overflow-x: hidden;
+    transition: all .5s;
+   }
+   .sidemenu a{
+    padding: 8px 8px 8px 64px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #999;
+    display: block;
+   }
+   .sidemenu a:hover{
+     color: white;
+   }
+   .sidemenu .closebtn{
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 32px;
+   }
+
+   #seemore{
+      margin-left: 150px;
+      cursor: pointer;
+   }
+
+   .symbolUnit{
+       font-size: 80px;
+       font-weight: 600;
+       float:inline-end;
+   }
+
+   #temperatureMain{
+       align-content: center;
+   }
+
+   #name {
+       font-weight: 300;
+   }
+
+   .feelsLike{
+       position: relative;
+       float:right;
+   }
+
+
+
+   #chartWind{
+       position: absolute;
+       visibility: hidden;
+       z-index:2;
+   }
+
+   #chartPer{
+       position:absolute;
+       visibility: hidden;
+       z-index:1;
+       
+   }
+
+   #aroundChart{
+        display: grid;
+        place-items: center;
+       height:300px;
+   }
+
+   .forecastMore{
+       display:none;
+   }
+
+   .forecastMore--show {
+       display:block;
+   }

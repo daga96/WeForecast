@@ -1,0 +1,107 @@
+.container{
+    display: block;
+    width: 412px;
+    height: 870px;
+    background-color: #1F2022;
+    justify-content: center;
+    align-items: center; 
+    padding:20px;
+    padding-top:40px;
+
+}
+
+.kakao-button{
+    margin-left:114px; 
+    margin-bottom: 90px;
+    cursor:pointer;
+
+}
+
+.section-header-min{
+    width:auto;
+    margin-bottom: 20px;
+    font-size:26px;
+    font-weight: 700;
+   
+}
+
+.title {
+    width: 250px;
+    font-weight: 500;
+    float:left;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 29px;
+  }
+   
+  .switch input {
+    display:none;
+  }
+   
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333333;
+    transition: .4s;
+  }
+   
+   
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+   
+  input:checked + .slider {
+    background-color: #00C4FF;
+  }
+   
+  input:focus + .slider {
+    box-shadow: 0 0 1px #00C4FF;
+  }
+   
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+   
+  .slider.round {
+    border-radius: 34px;
+    float: inline-end;
+  }
+   
+  .slider.round:before {
+    border-radius: 50%;
+  }
+   
+#box {
+    
+    width: auto;
+}
+.addkakao {
+    display: none;
+}
+.addkakao--show {
+    display:inline;
+    margin-bottom: 100px;
+}
+
+a{
+    cursor: pointer;
+}
+
+.set-kakao{
+    margin-top: 20px;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    
+    <title>WeForecast</title>
+  </head>
+ 
+  <body>
+   <section>
+    <div class="container">
+      <header>
+        <div class="row">
+          <div class="col-lg-auto head">
+            <span class="material-icons" id="menu-icon" onClick="openFunction()" >menu</span>
+           
+            <div id="menu" class="sidemenu">
+              <a href="settings.html">Settings</a>
+              <a href="widgets.html">Widgets</a>
+              <a href="about.html">About</a>
+              <a href="connectsns.html">Connect SNS</a>
+              <a href="#" class="closebtn" onclick="closeFunction()">&times;</a>
+            </div>
+         
+         
+
+          </div>
+          <div class="col-md-auto">
+          
+            <p id="place"><span class="material-icons">location_on</span><b id="name">Seoul</b><script>document.querySelector("#name").innerHTML=sessionStorage.getItem('placeName');</script></b></p>
+            
+            <script>
+              var timeFormat = sessionStorage.getItem('hoursValue');
+              var timeF = true;
+              if ( timeFormat == "24 hours") {
+                timeF= false;
+              }
+              else {
+                timeF = true;
+              }
+
+            </script>
+           
+           <p id="date">
+              <script> 
+                const option = {
+                    weekday: "long",
+                    timeZone:"Asia/Seoul",
+                    hour12 : timeF,
+                    hour:  "2-digit",
+                    minute: "2-digit",
+                };
+
+                document.write(new Date().toLocaleDateString("en-US",option)); </script>
+              </p>
+          </div>
+       
+          <div class="col-lg-auto">
+            <span class="material-icons"  onClick="newLocation()">add</span>
+              
+          </div>
+        <div>
+          <div class="row">
+            <div class="weatherIcon"> </div><div class="col-sm-10" id="weatherDesc"></div>
+            <div class="col-sm-12" id="temperatureMain"><h1 class="tempVal"></h1><p class="symbolUnit"></p></div>
+            <div class="col-sm-4">Feels like <p class="feelsLike"></p></div>
+        </div>
+        </div>
+        </header>
+        <main>
+        <div id="info">
+
+        </div>
+        <div id="details">
+        <div class="container-fluid">
+          
+          <p class="section-header"></br>Details </p> 
+         
+          <p id="today">
+            <script> 
+              const options2 = {
+                  day:"numeric",
+                  month: "long",
+                  timeZone:"Asia/Seoul",
+              };
+
+              document.write(new Date().toLocaleDateString("en-US",options2));
+            </script>
+            </p>
+          <div class="minimized"><span class="material-icons dropdown" id="dropdown"  onClick="toggleMore()">keyboard_arrow_down</span>
+            <div class="row" id="details-row">
+             
+              <div class="col-sm-1">   <img src="../icons/temperature icon.svg" class="element-icon"></div>
+              <div class="col-sm-4">
+                <p class="element"><span id="tempMax"></span> | <span id="tempMin"></span> 
+                <p class="element-desc">Max | Min</p> 
+              
+              </div>
+              <div class="col-sm-1">  <img src="../icons/rain icon.svg"  class="element-icon"></div>
+              <div class="col-sm-offset-1 col-sm-4">
+                <p class="element"> 5%</p>
+                <p class="element-desc">Chance</p>
+              </div>
+          </div>
+          <div class="row"  id="details-row">
+            <div class="col-sm-1"> <img src="../icons/wind icon.svg"  class="element-icon"></div>
+              <div class="col-sm-4">
+                <p class="element" id="wind"> 9 km/h</p>
+                <p class="element-desc">Wind speed</p>
+              </div>
+              <div class="col-sm-1"> <img src="../icons/uv icon.svg"  class="element-icon"></div>
+              <div class="col-sm-offset-1 col-sm-4">
+                <p class="element"> 4</p>
+                <p class="element-desc">UV index</p>
+              </div>
+          </div>
+          <div class="more">
+            <div class="row" id="details-row">
+             
+              <div class="col-sm-1">   <img src="../icons/humidity icon.png" class="element-icon"></div>
+              <div class="col-sm-4">
+                <p class="element" id="humidity">33%</p> 
+                <p class="element-desc" >Humidity</p> 
+              
+              </div>
+              <div class="col-sm-1">  <img src="../icons/pollution icon.png"  class="element-icon"></div>
+              <div class="col-sm-offset-1 col-sm-4">
+                <p class="element"> 107AQI</p>
+                <p class="element-desc">Pollution</p>
+              </div>
+          </div>
+          <div class="row"  id="details-row">
+            <div class="col-sm-1"> <img src="../icons/sunrise icon.png"  class="element-icon"></div>
+              <div class="col-sm-4">
+                <p class="element" id="sunriseVal"></p>
+                <p class="element-desc">Sunrise</p>
+              </div>
+              <div class="col-sm-1"> <img src="../icons/sunset icon.png"  class="element-icon"></div>
+              <div class="col-sm-offset-1 col-sm-4">
+                <p class="element" id="sunsetVal"></p>
+                <p class="element-desc">Sunset</p>
+              </div>
+          </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+        </div>
+
+        <div class="container-fluid" >
+          <p class="section-header"> Hourly Forecast</p>
+          <p>12-hour forecast</p>
+
+          <div id="aroundChart">
+          <div id="chart" class="chart"></div>
+          <div id="chartPer" class="chartPer"></div>
+          <div id="chartWind" class="chartWind"></div>
+          </div>
+          
+          
+          <script src="./graph.js"></script>
+          
+          <div class="row menu">
+            <label for="tempRadio" onclick="tempRadioCheck()">Temperature </br> 
+            <input type="radio" id="tempRadio" class="checkGraph" name="checkboxGraph" checked>  </label>
+            <label for="perpRadio" onclick="perpRadioCheck()">Percipitation </br> 
+            <input type="radio" id="perpRadio" class="checkGraph"  name="checkboxGraph"> </label>
+            <label for="windRadio" onclick="windRadioCheck()">Wind  </br> 
+            <input type="radio" id="windRadio" class="checkGraph"  name="checkboxGraph"></label>
+        
+          </div>
+
+
+
+
+        </div>
+        <div class="container-fluid" >
+          <p class="section-header"> Weekly Forecast</p>
+          <div class="forecast">
+            <div class="week-day">
+              <span id="date1"></span>
+              <div class="row-data">
+              <div class="perpWeather" id="weather1"></div>
+              <div class="mixMax"><span id="max1"></span> | <span id="min1"></span></div>
+              </div>
+            </div>
+  
+            <div class="week-day">
+              <span id="date2"></span>
+              <div class="row-data">
+              <div class="perpWeather" id="weather2"></div>
+              <span id="max2"></span> | <span id="min2"></span>
+              </div>
+            </div>
+  
+            <div class="week-day">
+              <span id="date3"></span>
+              <div class="row-data">
+              <div class="perpWeather" id="weather3"></div>
+              <span id="max3"></span> | <span id="min3"></span>
+            </div>
+            </div>
+          <div class="forecastMore">
+           
+           
+            <div class="week-day">
+              <span id="date2">Saturday</span>
+              <div class="row-data">
+              <div class="perpWeather" id="weather2"> 12%</div>
+              <span id="max2">10</span> | <span id="min2">5</span>
+              </div>
+            </div>
+  
+            <div class="week-day">
+              <span id="date2">Sunday</span>
+              <div class="row-data">
+              <div class="perpWeather" id="weather2"> 12%</div>
+              <span id="max2">10</span> | <span id="min2">5</span>
+              </div>
+            </div>
+  
+            
+            <div class="week-day">
+              <span id="date2">Monday</span>
+              <div class="row-data">
+              <div class="perpWeather" id="weather2"> 12%</div>
+              <span id="max2">10°</span> | <span id="min2">5°</span>
+              </div>
+            </div>
+        </div>
+
+          <span id="seemore" onclick="functionSeeMore()" > See More</span>
+        
+          
+      
+        </div>
+       
+        <div class="container-fluid" >
+          <p class="section-header"> Radar</p>
+          <iframe width="300" height="400"
+          src="https://embed.windy.com/embed2.html?lat=37.579&lon=127.002&detailLat=37.579&detailLon=127.002&width=650&
+          height=450&zoom=5&level=surface&overlay=temp&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=
+          map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+        </div>
+
+      </main>
+        <footer>
+          by Dagmara Lukanko
+        </footer>
+      </div>
+      </div>
+    </div>
+   </section>
+   <script src="./main.js"></script>
+  </body>
+</html>

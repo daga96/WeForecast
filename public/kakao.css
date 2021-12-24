@@ -1,0 +1,159 @@
+
+.container{
+    display: block;
+    width: 412px;
+    height: 870px;
+    background-color: #1F2022;
+    justify-content: center;
+    align-items: center; 
+    padding:20px;
+    padding-top:40px;
+
+}
+
+.section-header{
+    margin-bottom: 2px;
+    margin-left:25px;
+    font-size: 26px;
+    font-weight: 700;
+    float:left;
+}
+
+.section-header-min{
+    width:100%;
+    margin-bottom: 20px;
+    font-size:26px;
+    font-weight: 700;
+   
+}
+
+ul{
+    list-style-type: none;
+   
+}
+li {
+    padding-bottom: 30px;
+}
+
+.repeat-open {
+    cursor: pointer;
+}
+
+.repeatClass {
+
+    display: none;
+    
+}
+
+.repeatClass--show
+{
+    display:block;
+    position: absolute;
+    padding-top: 30px;
+    width: 360px;
+    height: 447px;
+    background-color: #1B1B1B;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 500px;
+}
+
+.customClass {
+    display: none;
+  
+}
+
+.customList {
+    cursor: pointer;
+}
+.customClass--show {
+    display:block;
+    position: absolute;
+    top:0;
+    padding-top: 30px;
+    width: 360px;
+    height: 447px;
+    background-color: #1B1B1B;
+    z-index: 2;
+    font-size: 20px;
+    font-weight: 500px;
+
+}
+
+
+ 
+  
+  .customClass--show .checboxWeek{
+    -webkit-appearance: none;
+    margin-left:5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border:2px white;
+  }
+
+  .customClass--show  .checboxWeek:checked{
+       
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    outline: none;
+    background-color: #50C7EB;
+}
+  
+  
+.endbuttons{ 
+    position: relative;
+    float: right;
+    outline:0;
+    margin-top:20px;
+    border: 0;
+    background-color: #1B1B1B;
+    color:white; 
+    
+    }
+
+    .checkboxDaily{
+        -webkit-appearance: none;
+        margin-left:5px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        outline: none;
+
+    }
+    .checkboxDaily:checked{
+       
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        outline: none;
+        background-color: #50C7EB;
+     
+    }
+
+    label{
+        cursor: pointer;
+    }
+
+
+    .daily{
+        display: hidden;
+    }
+
+    .daily--show {
+        display:block;
+    position: absolute;
+    padding-top: 30px;
+    width: 360px;
+    height: 447px;
+    background-color: #1B1B1B;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 500px;
+    }
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="side.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <title>WeForecast</title>
+  </head>
+  <body>
+    <section>
+        <div class="container">
+            <span class="material-icons" onclick="goBack()"> arrow_back_ios</span><p class="section-header"> About</p>
+            <script>
+                function goBack() {
+                  window.history.back();
+                }
+            </script>
+    
+    <div class="section-header-min"></br></br>Icons</div> 
+
+    <div class="section-box">
+        <div class="container-box">
+            <div class="a"><img src="../icons/104.png" class="icons"></br>Cloudy</div>
+            <div class="b"><img src="../icons/sun.png"class="icons"></br>Sunny</div>
+            <div class="c"><img src="../icons/water_white_24dp.png" class="icons"></br>Foggy</div>
+            <div class="d"><img src="../icons/310.png" class="icons"></br>Rainy</div>
+            <div class="e"><img src="../icons/401.png" class="icons"></br>Snowy</div>
+            <div class="f"><img src="../icons/101.png" class="icons"></br>Partially cloudy</div>
+            <div class="g"><img src="../icons/303.png" class="icons"></br>Thunderstorm</div>
+            <div class="h"><img src="../icons/150.png" class="icons"></br>Clear</div>
+        </div>
+        
+    </div>
+
+    <div class="section-header-min"></br>Definitions</div> 
+
+    <div  class="section-box">
+    <p><b>AQI: Air Quality Index</b>
+    The higher the AQI Index the greater the level of air pollution
+    </p>
+
+    <ul>
+        <li> <span class="dot" id="dot1"></span>&emsp; 0-50&emsp;&nbsp;   Good        </li>
+        <li> <span class="dot" id="dot2"></span>&emsp;&ensp;>51&emsp;&nbsp;    Moderate       </li>
+        <li> <span class="dot" id="dot3"></span>&emsp; >101&emsp;   Unhealthy for sensitive groups    </li>
+        <li> <span class="dot" id="dot4"></span>&emsp; >151&emsp;   Unhealthy      </li>
+        <li> <span class="dot" id="dot5"></span>&emsp; >201&emsp;   Very Unhealthy       </li>
+        <li> <span class="dot" id="dot6"></span>&emsp; >301&emsp;   Hazadrous       </li>
+    </ul>
+    </div>
+
+    
+            
+   
+    </section>
+       
+      </body>
+
+  </body>
+</html>

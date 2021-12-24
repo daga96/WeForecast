@@ -1,0 +1,178 @@
+body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:#FFFFFF;
+    font-family: 'Roboto', sans-serif; 
+}
+.container{
+  display: block;
+  width: 412px;
+  height: 870px;
+  background-color: #1F2022;
+  justify-content: center;
+  align-items: center; 
+  padding:20px;
+  padding-top:40px;
+
+}
+
+.settings-buttons {
+    margin-top:100px;
+    margin-left: 35px;
+}
+.settings {
+    margin-top:20px;
+}
+
+.title {
+  width: 250px;
+  font-weight: 500;
+  float:left;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 29px;
+}
+ 
+.switch input {
+  display:none;
+}
+ 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #333333;
+  transition: .4s;
+}
+ 
+ 
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+ 
+input:checked + .slider {
+  background-color: #00C4FF;
+}
+ 
+input:focus + .slider {
+  box-shadow: 0 0 1px #00C4FF;
+}
+ 
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+ 
+.slider.round {
+  border-radius: 34px;
+  float: inline-end;
+}
+ 
+.slider.round:before {
+  border-radius: 50%;
+}
+ 
+#box {
+  
+  width: auto;
+}
+
+.wrap{
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  width: 60%;
+}
+
+.wrap1{
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  width: 60%;
+
+}
+
+.left, .right{
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  transition: 0.3s;
+}
+
+.left{
+  position: relative;
+ 
+}
+
+#imperial {
+  border-radius:35px 0px 0px 35px;
+}
+
+#metric {
+  border-radius: 0px 35px 35px 0px;
+}
+#h12{
+  border-radius:35px 0px 0px 35px;
+}
+
+#h24{
+  border-radius: 0px 35px 35px 0px;
+
+}
+
+.button{
+  width: 150px;
+  height: 45px;
+  justify-content: center;
+  background-color: #1B1B1B;
+  color: #FFFFFF;
+  outline:0;
+  border: 0;
+}
+
+.button:hover{
+  background-color: #00C4FF;
+}
+.button.imperial--active {
+  background-color: #00C4FF;
+}
+
+.button.metric--active {
+  background-color: #00C4FF;
+}
+
+.button.h12--active {
+  background-color: #00C4FF;
+}
+
+.button.h24--active {
+  background-color: #00C4FF;
+}
+
+.endbuttons{ 
+  position: relative;
+  float: right;
+  outline:0;
+  margin-top:20px;
+  border: 0;
+  background-color: #1B1B1B;
+  color:white; 
+  
+  }
